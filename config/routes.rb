@@ -8,7 +8,19 @@ TaskMgrApp::Application.routes.draw do
 
   resources :tasks
 
-  get "tasks/success/:id" => 'tasks#success'
+  # Example resource route with options:
+     resources :tasks do
+       member do
+         get 'success'
+         
+       end
+  
+ #      collection do
+  #       get 'sold'
+  #     end
+     end
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
