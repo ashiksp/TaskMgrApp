@@ -1,6 +1,8 @@
 class TasksController < ApplicationController
-
+	
+	
 	layout "tasks"
+	
 
 def new
 	@task = Task.new
@@ -12,12 +14,14 @@ end
 
 def edit
 	@task = Task.find(params[:id])
+	@depends = Depend.all
 end
 
 def create
 	@task = Task.new(task_params)
 
 	if @task.save
+
 		flash[:notice] = "Task successfully created"
 		redirect_to @task
 	else
