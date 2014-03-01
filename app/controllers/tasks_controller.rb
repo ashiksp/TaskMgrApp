@@ -44,7 +44,14 @@ end
 
 def index
 	@tasks = Task.all
-	@tasks = Task.paginate(page: params[:page], per_page: 3).order('created_at DESC')
+	@tasks = Task.paginate(page: params[:page], per_page: 4).order('created_at DESC')
+
+	respond_to do |format|
+	format.html
+    format.csv { send_data @tasks.to_csv }
+    #format.csv { render text: @tasks.to_csv }
+    format.xls #{ send_data @tasks.to_csv(col_sep: "\t") }
+end
 	
 end
 
