@@ -62,6 +62,15 @@
     <td><%= f.check_box (:phase) %><%= f.label :module2, 'Module 2' %> </td>
   </tr>
 
+<!--
+  <tr>
+    <td><%= f.label :values, 'Phase Includes' %></td>
+    <td><%= collection_check_boxes(:task, :depend_ids, Depend.all, :id, :name) %> </td>
+  </tr>
+-->
+
+
+
 </table>
 <br />
 <%= f.submit %>

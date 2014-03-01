@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140228212219) do
+ActiveRecord::Schema.define(version: 20140228234946) do
 
   create_table "depends", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "task_id"
   end
+
+  add_index "depends", ["task_id"], name: "index_depends_on_task_id"
 
   create_table "tasks", force: true do |t|
     t.string   "taskName"

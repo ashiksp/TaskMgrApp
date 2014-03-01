@@ -9,7 +9,7 @@
 <body>
 
 <center>
-<h1 id="header2">Task Manager App</h1>
+<h1 id="header">Task Manager App</h1>
 </center>
 
 <p class="navbar-text pull-right">
@@ -22,9 +22,11 @@
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 
+<center>
 <% if notice %>
-  <p class="alert alert-notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 <% end %>
+</center>
 
 
 <ul class="nav">
@@ -39,5 +41,11 @@
 <% end %>
 </center>
 
+<br /><br /><br />
+<div class='footer'>
+      <div class='footerContent'>
+        Visit us at <a href='http://www.tcs.com'>http://www.tcs.com</a>.
+      </div>
+</div
 </body>
 </html>

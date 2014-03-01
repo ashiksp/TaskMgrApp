@@ -19,8 +19,10 @@ end
 
 def create
 	@task = Task.new(task_params)
+	#@depends = Depend.find(params[:task][:depend_ids])
+	#@task.depends << @depends
 
-	if @task.save
+	if @task.save 
 
 		flash[:notice] = "Task successfully created"
 		redirect_to @task
@@ -61,7 +63,7 @@ def task_params
 end
 
 def depend_params
-	params.require(:depend).permit(:name)
+	params.require(:depend).permit(:name, :task_id)
 end
 
 end
