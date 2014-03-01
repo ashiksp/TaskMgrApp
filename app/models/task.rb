@@ -2,6 +2,7 @@ class Task < ActiveRecord::Base
 
 	has_many :depends
 
+
 	
 
 	validates :taskName, presence:true, length: { minimum: 5 }

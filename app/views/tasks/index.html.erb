@@ -1,11 +1,14 @@
 
 <center>
+
 <h1>Listing Tasks</h1>
 
 <div>
   <fieldset style="width:700px">
     <legend>Existing Tasks:</legend>
 
+
+<%= will_paginate @tasks %>
 <table cellpadding="1">
   <tr>
     <th>Task Name</th><th></th><th></th>
@@ -21,9 +24,11 @@
 
     <%= render partial: "tasks", collection: @tasks %>
 </table>
+<%= will_paginate @tasks %>
 </fieldset>
 </div>
 <br><br>
 <%= link_to 'New Task', new_task_path %><br>
 <%= link_to 'Click Here to GO Home' , welcome_index_path %>  <br>
 </center>
+

@@ -47,6 +47,8 @@ end
 
 def index
 	@tasks = Task.all
+	@tasks = Task.paginate(page: params[:page], per_page: 2)
+	
 end
 
 def destroy

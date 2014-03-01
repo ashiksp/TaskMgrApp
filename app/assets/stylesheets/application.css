@@ -11,5 +11,6 @@
  *= require_self
  *= require tasks
  *= require welcome
+ *= require fork_ribs
  *= require_tree .
  */
