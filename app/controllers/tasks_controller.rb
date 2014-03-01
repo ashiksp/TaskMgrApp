@@ -38,7 +38,8 @@ end
 def update
 	@task = Task.find(params[:id])
 	if @task.update(task_params)
-		render 'success' 
+		#render 'success'
+		render 'show' 
 	else
 		render 'edit'
 	end
