@@ -15,19 +15,19 @@
   </center>
 </div>
 
-    <ul class="nav nav-pills">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <ul class="nav nav-pills pull-right">
+      
     <% if user_signed_in? %>
     Logged in as <strong><%= current_user.email %></strong>. |
     <%= link_to 'Change Password', edit_user_registration_path %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete  %> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
     <% else %>
     <%= link_to "Sign up", new_user_registration_path  %> |
-    <%= link_to "Login", new_user_session_path  %>
+    <%= link_to "Login", new_user_session_path  %> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
     <% end %>
     </ul>
 
-    <ul class="nav nav-list">
+    <ul class="nav nav-pills">
     <li class="active"><a href="/welcome/index"><i class="icon-home icon-white"></i> Home</a>
 
 
@@ -56,7 +56,9 @@
 <br /><br /><br />
 <div class='footer'>
       <div class='footerContent'>
+        <center>
         Visit us at <a href='http://www.tcs.com'>http://www.tcs.com</a>.
+      </center>
       </div>
 </div
 </body>

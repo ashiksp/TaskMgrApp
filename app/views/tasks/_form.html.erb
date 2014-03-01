@@ -1,5 +1,7 @@
 
 <center>
+
+<div class="form-group">
 <%= form_for @task do |f| %>
   <% if @task.errors.any? %>
   <div id="error_explanation">
@@ -13,7 +15,7 @@
   </div>
   <% end %>
 <div>
-  <fieldset style="width:500px">
+  <fieldset style="width:600px">
     <legend>Task Details:</legend>
   <table>
   <tr>
@@ -38,8 +40,7 @@
   </tr>
   <tr>
     <td><%= f.label :Priority, 'Priority of Task :' %></td>
-    <td><%= f.radio_button(:priority, "Low") %>
-    <%= f.label :Low %> </td>
+    <td><%= f.radio_button(:priority, "Low") %><%= f.label :Low %> </td>
   </tr>
   <tr>
     <td></td>
@@ -62,19 +63,11 @@
     <td><%= f.check_box (:phase) %><%= f.label :module2, 'Module 2' %> </td>
   </tr>
 
-<!--
-  <tr>
-    <td><%= f.label :values, 'Phase Includes' %></td>
-    <td><%= collection_check_boxes(:task, :depend_ids, Depend.all, :id, :name) %> </td>
-  </tr>
--->
-
-
-
 </table>
 <br />
 <%= f.submit %>
 </fieldset>
+</div>
 </div>
 
 

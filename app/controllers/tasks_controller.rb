@@ -44,7 +44,7 @@ end
 
 def index
 	@tasks = Task.all
-	@tasks = Task.paginate(page: params[:page], per_page: 3)
+	@tasks = Task.paginate(page: params[:page], per_page: 3).order('created_at DESC')
 	
 end
 
