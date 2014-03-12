@@ -1,0 +1,16 @@
+
+ 
+
+  <tr>
+    <td><%= tasks.taskName %></td><td></td><td></td>
+    <td><%= tasks.projectName %></td><td></td><td></td>
+    <td><%= tasks.priority %></td><td></td><td></td>
+    <td><%= tasks.assignedto %></td><td></td><td></td>
+    <td><%= tasks.hours %></td><td></td><td></td>
+    <td><%= link_to 'Show', tasks %></td><td></td><td></td>
+    <td><%= link_to 'Edit', edit_task_path(tasks) %></td><td></td><td></td>
+    <td><%= link_to 'Destroy', task_path(tasks), 
+    method: :delete, data: {confirm: 'Are you sure?'} %></td>
+  </tr>
+
+

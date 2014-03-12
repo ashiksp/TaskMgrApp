@@ -1,0 +1,68 @@
+
+<center>
+<h2>Task Details : </h2>
+<br>
+
+<div>
+  <fieldset style="width:500px">
+    <legend>Details:</legend>
+  <table>
+  <tr>
+    <td><strong>Task Name : </strong></td>
+    <td><%= @task.taskName %></td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+    <td><strong>Project Name : </strong></td>
+    <td><%= @task.projectName %></td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+    <td><strong>Description : </strong></td>
+    <td><%= @task.description %></td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+    <td><strong>Assigned To : </strong></td>
+    <td><%= @task.assignedto %></td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+    <td><strong>Hours Allocated : </strong></td>
+    <td><%= @task.hours %></td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+    <td><strong>Priority ofpriority : </strong></td>
+    <td><%= @task.priority %></td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+    <td><strong>Task Depends On : </strong></td>
+    <td>
+    <% if  @task.dependsOn == "1"  %>
+     Module 1 
+    <% end %>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+    <% if  @task.phase == "1"  %>
+     Module 2
+    <% end %>
+    </td>
+  </tr>
+</table>
+</fieldset>
+</div>
+
+<br><br>
+<%= link_to 'Click Here to View All' , tasks_path %>  <br>
+<%= link_to 'New Task', new_task_path %>
+</center>

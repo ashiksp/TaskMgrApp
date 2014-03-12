@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  taskName: MyString
+  projectName: MyString
+  description: MyText
+  priority: MyString
+  assignedto: MyString
+  dependsOn: MyString
+
+two:
+  taskName: MyString
+  projectName: MyString
+  description: MyText
+  priority: MyString
+  assignedto: MyString
+  dependsOn: MyString

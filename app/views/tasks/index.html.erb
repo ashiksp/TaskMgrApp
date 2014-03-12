@@ -1,0 +1,29 @@
+
+<center>
+<h1>Listing Tasks</h1>
+
+<div>
+  <fieldset style="width:700px">
+    <legend>Existing Tasks:</legend>
+
+<table cellpadding="1">
+  <tr>
+    <th>Task Name</th><th></th><th></th>
+    <th>Project Name</th><th></th><th></th>
+    <th>Priority</th><th></th><th></th>
+    <th>Assigned To</th><th></th><th></th>
+    <th>Allocated Hours</th><th></th><th></th>
+    <th></th><th></th><th></th>
+    <th></th><th></th><th></th>
+    <th></th><th></th>
+  </tr>
+
+
+    <%= render partial: "tasks", collection: @tasks %>
+</table>
+</fieldset>
+</div>
+<br><br>
+<%= link_to 'New Task', new_task_path %><br>
+<%= link_to 'Click Here to GO Home' , welcome_index_path %>  <br>
+</center>

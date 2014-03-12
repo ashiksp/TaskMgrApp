@@ -1,0 +1,76 @@
+
+<center>
+<%= form_for @task do |f| %>
+  <% if @task.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@task.errors.count, "error") %> prohibited
+      this task from being saved:</h2>
+    <ul>
+    <% @task.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+<div>
+  <fieldset style="width:500px">
+    <legend>Task Details:</legend>
+  <table>
+  <tr>
+    <td><%= f.label :TaskName, 'Task Name :' %></td>
+    <td><%= f.text_field :taskName %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :ProjectName, 'Project Name :' %></td>
+    <td><%= f.text_field :projectName %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :Description, 'Description :' %></td>
+    <td><%= f.text_area :description %></td>
+  </tr>
+    <tr>
+    <td><%= f.label :AssignedTo, 'Assigned To :' %></td>
+    <td><%= f.text_field :assignedto %></td>
+  </tr>
+    <tr>
+    <td><%= f.label :hours, 'Hours Allocated :' %></td>
+    <td><%= f.text_field :hours %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :Priority, 'Priority of Task :' %></td>
+    <td><%= f.radio_button(:priority, "Low") %>
+    <%= f.label :Low %> </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+    <%= f.radio_button(:priority, "Medium") %>
+    <%= f.label :Medium %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+    <%= f.radio_button(:priority, "High") %>
+    <%= f.label :High %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :DependsOn, 'Depends On' %></td>
+    <td><%= f.check_box (:dependsOn) %><%= f.label :module1, 'Module 1' %> </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><%= f.check_box (:phase) %><%= f.label :module2, 'Module 2' %> </td>
+  </tr>
+    
+    <td><%= f.submit %></td>
+  
+  </tr>
+
+</table>
+</fieldset>
+</div>
+
+
+<% end %>
+
+</center>
