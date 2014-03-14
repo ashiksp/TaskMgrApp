@@ -19,8 +19,6 @@ end
 
 def create
 	@task = Task.new(task_params)
-	#@depends = Depend.find(params[:task][:depend_ids])
-	#@task.depends << @depends
 
 	if @task.save 
 
@@ -38,8 +36,7 @@ end
 def update
 	@task = Task.find(params[:id])
 	if @task.update(task_params)
-		#render 'success'
-		render 'show' 
+		render 'success' 
 	else
 		render 'edit'
 	end
@@ -47,7 +44,7 @@ end
 
 def index
 	@tasks = Task.all
-	@tasks = Task.paginate(page: params[:page], per_page: 2)
+	@tasks = Task.paginate(page: params[:page], per_page: 3)
 	
 end
 
@@ -55,6 +52,7 @@ def destroy
 	@task = Task.find(params[:id])
 	@task.destroy
 
+	flash[:notice] = "Task successfully Deleted"
 	redirect_to tasks_path
 
 end

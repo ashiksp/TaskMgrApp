@@ -5,7 +5,7 @@
 	<legend>New Registration:</legend>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  
+  <%= devise_error_messages! %>
 
 <table>
 	<tr>
@@ -28,5 +28,5 @@
 <%= render "devise/shared/links" %>
 </fieldset>
 
-<%= devise_error_messages! %>
+
 </center>

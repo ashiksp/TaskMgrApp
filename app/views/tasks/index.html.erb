@@ -4,12 +4,12 @@
 <h1>Listing Tasks</h1>
 
 <div>
-  <fieldset style="width:700px">
+  <fieldset style="width:1000px">
     <legend>Existing Tasks:</legend>
 
 
 <%= will_paginate @tasks %>
-<table cellpadding="1">
+<table class="table table-striped">
   <tr>
     <th>Task Name</th><th></th><th></th>
     <th>Project Name</th><th></th><th></th>
@@ -27,8 +27,5 @@
 <%= will_paginate @tasks %>
 </fieldset>
 </div>
-<br><br>
-<%= link_to 'New Task', new_task_path %><br>
-<%= link_to 'Click Here to GO Home' , welcome_index_path %>  <br>
 </center>
 
